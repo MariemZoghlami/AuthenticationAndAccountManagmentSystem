@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+:root{
+    --accent-color: #8672FF;
+    --base-color:white;
+    --text-color:#2E2B42;
+    --input-color: #F3F0FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-family: Poppins, sans-serif; font-size: 12pt; text-align: center; color: var(--text-color); }
+
+body {
+  min-height: 100vh;
+  margin: 0;  /* Remove any extra margin */
+  background-image: url("images/back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;  /* Centers all content horizontally */
+  align-items: center;      /* Centers all content vertically */
+}
+
+
+
+
+/* Loginpage*/
+.login-page {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;       /* centers vertically */
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-panel {
+background: rgba(134, 114, 255, 0.2); /* Very light purple with transparency */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 400px;
+  position: relative;
+  z-index: 2; /* Ensures the panel stays above images */
+  backdrop-filter: blur(10px); /* Frosted glass effect behind the panel */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle white border for definition */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger and softer shadow for depth */
+
+}
+.top-image {
+  position: absolute;
+  top: -5%; /* Adjusted slightly higher so it doesn’t overlap the panel */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;  /* Adjust the width as desired */
+  height: auto;  /* Maintain aspect ratio */
+  z-index: 2;  /* Ensure it stays above other content */
+}
+
+/* For Image 2 (Left Image) */
+.image2 {
+  position: absolute;
+  top: 40%;  /* Adjust to align vertically */
+  left: 5%;
+  width: 500px;  /* Increase size */
+  height: auto;  /* Maintain aspect ratio */
+  z-index: 1;
+}
+
+/* For Image 3 (Right Image) */
+.image3 {
+  position: absolute;
+  top: 40%;  /* Adjust to align vertically */
+  right: 5%;
+  width: 500px;  /* Increase size */
+  height: auto;  /* Maintain aspect ratio */
+  z-index: 1;
+}
+
+/* signuppage*/
+
+
+
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center elements inside the page */
+  justify-content: center; /* Center the entire form vertically */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.signup-panel {
+  background: rgba(134, 114, 255, 0.2); /* Very light purple with transparency */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 400px;
+  position: relative;
+  z-index: 2; /* Ensures the panel stays above images */
+  backdrop-filter: blur(10px); /* Frosted glass effect behind the panel */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle white border for definition */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger and softer shadow for depth */
+
+}
+
+.left-image, .right-image {
+  position: absolute;
+  width: 200px; /* Adjust size as needed */
+  z-index: 1;
+}
+
+.left-image {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 400px;      /* Make the image 400px wide (adjust as needed) */
+  height: auto;      /* Maintain aspect ratio */
+}
+
+.right-image {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 400px;      /* Make the image 400px wide (adjust as needed) */
+  height: auto;      /* Maintain aspect ratio */
+}
+.user-icon {
+  width: 20px;  /* Adjust the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  vertical-align: middle; /* Align it with the text */
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+.e-icon {
+  width: 30px;  /* Adjust the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  vertical-align: middle; /* Align it with the text */
+  margin-right: 5px; /* Add some space between the icon and the text */
+}
+/* space between signup button and loginlink*/
+.signup-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adds space between form elements */
+}
+
+.signup-panel p {
+  margin-top: 20px; /* Space before the "Already have an account?" text */
+}
+
+.signup-panel button {
+  align-self: center; /* This ensures the button stays centered */
+}
+/* space between signup button and loginlink*/
+@media (max-width: 520px) {
+  .signup-panel {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+.login-panel h1,
+.signup-panel h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+.login-panel p {
+    display: inline-flex; /* allows gap between text and link */
+    gap: 5px;             /* space between "?" and "Signup" */
+    margin-top: 20px;     /* optional, space above paragraph */
+}
+.login-panel form > div {
+    margin-bottom: 20px;
+}
+
+.login-panel button {
+    padding: 1em 5em;
+    font-size: 1rem;
+}
+
+
+
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form > div {
+    display: flex;
+    width: 100%;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+form input {
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    background-color: var(--input-color);
+    font-size: 1rem;
+    transition: 0.15s ease;
+}
+
+form input:hover {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+    background-color: #fff;
+}
+
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+form button:hover, form button:focus {
+    background-color: var(--text-color);
+    outline: none;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#error-message {
+    color: #F06272;
+}
+
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form label {
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  border-radius: 10px 0 0
+}
+
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500 ;
+}
+
+form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+form input:hover{
+    background-color: var(--accent-color);
+}
+
+form input:focus{
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+
+}
+
+form input::placeholder{
+    color: var(--text-color);
+    opacity: 1;
+}
+
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em ;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font-size: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover{
+    background-color: var(--text-color);
+}
+
+form button:focus{
+    outline:none;
+    background-color: var(--text-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+a:hover{
+    text-decoration: underline;
+}
+@media(max-width:1100px){
+    .wrapper{
+        width: min(600px, 100%);
+        border-radius: 0;
+    }
+}
+form div.Incorrect label{
+    background-color: #F06272;
+
+}
+form div.Incorrect input{
+    border-color: #F06272;
+}
+
+#error-message{
+    color: #F06272;
+}
+
+
+
+
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+.form-wrapper {
+  position: relative;
+}
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="signup-page">
+
+    <div class="signup-panel">
+      <h1>Signup</h1>
+      <p id="error-message"></p>
+      <form method="POST" action="signup.php">
+        <div>
+        <label for="Firstname-input">
+          <img src="images/sss.png" alt="User icon" class="user-icon"> 
+        </label>
+        <input required type="text" name="username" id="Firstname-input" placeholder="Username">
+      </div>
+        <div>
+          <label for="Email-input">
+          <img src="images/e.png" alt="User icon" class="e-icon"> 
+
+          </label>
+
+          <input type="email" name="email" id="Email-input" placeholder="Email" required>
+        </div>
+        <div>
+          <label for="Password-input">
+          <img src="images/p.png" alt="User icon" class="e-icon"> 
+
+          </label>
+          <input type="password" name="password" id="Password-input" placeholder="Password" required>
+        </div>
+        <div>
+          <label for="Repeat-Password-input">
+          <img src="images/p.png" alt="User icon" class="e-icon"> 
+
+          </label>
+          <input type="password" name="repeat-password" id="Repeat-Password-input" placeholder="Repeat Password" required>
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <img src="images/s.png" alt="Person with phone" class="left-image">
+    <img src="images/chair-removebg-preview.png" alt="Person with cat" class="right-image">
+
+
+  </div>
+</body>
+</html> 
